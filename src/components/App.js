@@ -37,12 +37,12 @@ const App = () => {
 						<th>Log Text</th>
 						<th>User</th>
 						<th>Created</th>
-						<th></th>
+						<th />
 					</tr>
 				</thead>
 				<tbody>
 					{ logs.length > 0 && logs.map(log => (
-						<LogItem />
+						<LogItem key={log._id} log={log} />
 					)) }
 				</tbody>
 			</Table>
