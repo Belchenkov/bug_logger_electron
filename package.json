@@ -25,9 +25,11 @@
   },
   "dependencies": {
     "bootstrap": "^4.5.0",
+    "moment": "^2.27.0",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-moment": "^0.9.7"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
