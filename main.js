@@ -1,16 +1,19 @@
 const path = require('path')
 const url = require('url')
 const { app, BrowserWindow } = require('electron')
+const connectDB = require('./config/db');
 
-let mainWindow
+// Connect to database
+connectDB();
 
-let isDev = false
+let mainWindow;
+let isDev = false;
 
 if (
 	process.env.NODE_ENV !== undefined &&
 	process.env.NODE_ENV === 'development'
 ) {
-	isDev = true
+	isDev = true;
 }
 
 function createMainWindow() {
