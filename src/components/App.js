@@ -66,6 +66,13 @@ const App = () => {
 		showAlert('Log Added');
 	};
 
+	const deleteItem = _id => {
+		console.log('asdfasdfasdf')
+		setLogs(logs.filter(item => item._id !== _id));
+
+		showAlert('Log Deleted');
+	};
+
 	return (
 		<Container>
 			<AddLogItem addItem={addItem} />
@@ -84,7 +91,7 @@ const App = () => {
 				</thead>
 				<tbody>
 					{ logs.length > 0 && logs.map(log => (
-						<LogItem key={log._id} log={log} />
+						<LogItem key={log._id} log={log} deleteItem={deleteItem} />
 					)) }
 				</tbody>
 			</Table>
