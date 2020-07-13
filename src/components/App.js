@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { ipcRenderer } from 'electron';
 import Container from "react-bootstrap/Container";
 import Table from "react-bootstrap/Table";
 import Alert from "react-bootstrap/Alert";
@@ -12,6 +13,15 @@ const App = () => {
 		message: '',
 		variant: 'success'
 	});
+
+	useEffect(() => {
+		ipcRenderer.send('logs:load');
+
+		ipcRenderer.on('logs:get', (e, logs) => {
+			setLogs(JSON.parse(logs));
+		});
+	}, [])
+
 	const [logs, setLogs] = useState([
 		{
 			_id: 1,
@@ -67,7 +77,6 @@ const App = () => {
 	};
 
 	const deleteItem = _id => {
-		console.log('asdfasdfasdf')
 		setLogs(logs.filter(item => item._id !== _id));
 
 		showAlert('Log Deleted');
