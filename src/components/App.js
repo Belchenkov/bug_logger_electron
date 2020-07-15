@@ -20,6 +20,11 @@ const App = () => {
 		ipcRenderer.on('logs:get', (e, logs) => {
 			setLogs(JSON.parse(logs));
 		});
+
+		ipcRenderer.on('logs:clear', e => {
+			setLogs([]);
+			showAlert('Logs Cleared');
+		});
 	}, [])
 
 	const [logs, setLogs] = useState([]);
