@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Cuprum:wght@400;700&display=swap');
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css";
+
 * {
 	box-sizing: border-box;
 }
 
 body {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'Cuprum', sans-serif;
+	font-size: 18px;
+	background: url("../assets/img/bg.png") repeat;
 }
