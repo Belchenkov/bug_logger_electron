@@ -1,6 +1,8 @@
-# BugLogger
+# BugLogger React/Electron
 
-React/Electron app that uses a MongoDB Atlas database to keep track of logs
+> React/Electron app that uses a MongoDB Atlas database to keep track of logs
+
+### [Release](https://github.com/Belchenkov/bug_logger_electron/releases/tag/1.0.0)
 
 ## Usage
 
